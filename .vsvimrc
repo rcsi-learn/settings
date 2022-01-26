@@ -1,0 +1,10 @@
+set relativenumber
+set ignorecase
+set clipboard=unnamed
+
+noremap gfs :vsc Edit.FormatSelection <CR>
+noremap gfd :vsc Edit.FormatDocument <CR>
+
+noremap gcl :vsc Edit.ToggleLineComment <CR>
+noremap gcb :vsc Edit.ToggleBlockComment <CR>
+noremap gqi :vsc Edit.QuickInfo <CR>
