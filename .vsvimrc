@@ -1,3 +1,4 @@
+set number
 set relativenumber
 set ignorecase
 set clipboard=unnamed
@@ -5,6 +6,34 @@ set clipboard=unnamed
 noremap gfs :vsc Edit.FormatSelection <CR>
 noremap gfd :vsc Edit.FormatDocument <CR>
 
-noremap gcl :vsc Edit.ToggleLineComment <CR>
-noremap gcb :vsc Edit.ToggleBlockComment <CR>
+noremap gcl :vsc Edit.ToggleLineComment <CR> <ESC>
+noremap gcb :vsc Edit.ToggleBlockComment <CR> <ESC>
 noremap gqi :vsc Edit.QuickInfo <CR>
+
+noremap gnm :vsc Edit.NextMethod <CR>
+noremap gNm :vsc Edit.PreviousMethod <CR>
+
+noremap gne :vsc View.NextError <CR>
+noremap gNe :vsc View.PreviousError <CR>
+
+noremap zoc :vsc Edit.CollapseAllOutlining <CR>
+noremap zoe :vsc Edit.ExpandAllOutlining <CR>
+noremap zot :vsc Edit.ToggleOutliningExpansion <CR>
+
+noremap grr :vsc Refactor.Rename <CR>
+map gfr :vsc Edit.FindAllReferences <CR>
+map gpd :vsc Edit.PeekDefinition <CR>
+
+nnoremap gq' ciw'' <Esc> P
+nnoremap gq" ciw"" <Esc> P
+nnoremap gq( ciw() <Esc> P
+nnoremap gq) ciw() <Esc> P
+nnoremap gq[ ciw[] <Esc> P
+nnoremap gq] ciw[] <Esc> P
+nnoremap gq{ ciw{} <Esc> P
+nnoremap gq} ciw{} <Esc> P
+
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
