@@ -1,39 +1,60 @@
 set number
 set relativenumber
 set ignorecase
+set smartcase
 set clipboard=unnamed
 
-noremap gfs :vsc Edit.FormatSelection <CR>
-noremap gfd :vsc Edit.FormatDocument <CR>
+"let mapleader = “ “
+let mapleader = "\<SPACE>"
 
-noremap gcl :vsc Edit.ToggleLineComment <CR> <ESC>
-noremap gcb :vsc Edit.ToggleBlockComment <CR> <ESC>
-noremap gqi :vsc Edit.QuickInfo <CR>
+vmap <leader>fs :vsc Edit.FormatSelection<CR>
+nmap <leader>fd :vsc Edit.FormatDocument<CR>
 
-noremap gnm :vsc Edit.NextMethod <CR>
-noremap gNm :vsc Edit.PreviousMethod <CR>
+map <leader>cl :vsc Edit.ToggleLineComment<CR>
+map <leader>cb :vsc Edit.ToggleBlockComment<CR>
+map <leader>qi :vsc Edit.QuickInfo<CR>
 
-noremap gne :vsc View.NextError <CR>
-noremap gNe :vsc View.PreviousError <CR>
+nmap <leader>gm :vsc Edit.NextMethod<CR>
+nmap <leader>gM :vsc Edit.PreviousMethod<CR>
 
-noremap zoc :vsc Edit.CollapseAllOutlining <CR>
-noremap zoe :vsc Edit.ExpandAllOutlining <CR>
-noremap zot :vsc Edit.ToggleOutliningExpansion <CR>
+nmap <leader>ge :vsc View.NextError<CR>
+nmap <leader>gE :vsc View.PreviousError<CR>
 
-noremap grr :vsc Refactor.Rename <CR>
-map gfr :vsc Edit.FindAllReferences <CR>
-map gpd :vsc Edit.PeekDefinition <CR>
+nmap zc :vsc Edit.CollapseAllOutlining<CR>
+nmap zd :vsc Edit.CollapsetoDefinitions<CR>
+nmap ze :vsc Edit.ExpandAllOutlining<CR>
+nmap zt :vsc Edit.ToggleOutliningExpansion<CR>
 
-nnoremap gq' ciw'' <Esc> P
-nnoremap gq" ciw"" <Esc> P
-nnoremap gq( ciw() <Esc> P
-nnoremap gq) ciw() <Esc> P
-nnoremap gq[ ciw[] <Esc> P
-nnoremap gq] ciw[] <Esc> P
-nnoremap gq{ ciw{} <Esc> P
-nnoremap gq} ciw{} <Esc> P
+map <leader>rr :vsc Refactor.Rename<CR>
+map <leader>fr :vsc Edit.FindAllReferences<CR>
+map <leader>pd :vsc Edit.PeekDefinition<CR>
 
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+nmap <leader>f` ciw``<Esc>P
+nmap <leader>f' ciw''<Esc>P
+nmap <leader>f" ciw""<Esc>P
+nmap <leader>f( ciw()<Esc>P
+nmap <leader>f) ciw()<Esc>P
+nmap <leader>f[ ciw[]<Esc>P
+nmap <leader>f] ciw[]<Esc>P
+nmap <leader>f{ ciw{}<Esc>P
+nmap <leader>f} ciw{}<Esc>P
+nmap <leader>f< ciw<><Esc>P
+nmap <leader>f> ciw<><Esc>P
+
+vmap <leader>f` c``<Esc>P
+vmap <leader>f' c''<Esc>P
+vmap <leader>f" c""<Esc>P
+vmap <leader>f( c()<Esc>P
+vmap <leader>f) c()<Esc>P
+vmap <leader>f[ c[]<Esc>P
+vmap <leader>f] c[]<Esc>P
+vmap <leader>f{ c{}<Esc>P
+vmap <leader>f} c{}<Esc>P
+vmap <leader>f< c<><Esc>P
+vmap <leader>f> c<><Esc>P
+
+imap <C-h> <Left>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
+map <SPACE> <Nop>
