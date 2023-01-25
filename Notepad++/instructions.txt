@@ -1,0 +1,11 @@
+Install Plugins:
+1. LuaScript (select word with ctrl+d)
+	1.1 Restart Notepad++.
+	1.2 Go to Plugins -> LuaScript -> Edit Startup Script.
+	1.3 Copy and paste the content of "startup.lua" file.
+	1.4 Restart Notepad++.
+	1.5 Go to Settings -> ShortCut Mapper...
+	1.6 Change and edit the shortcuts if exist an conflict with "ctrl + d", this is a configuration example:
+		- Multiple Cursor - Selection Add Next -> ctrl + d
+		- Multiple Cursor - Selection Add All -> ctrl + shift + d	
+2. BetterMultiSelection (for multicursor)

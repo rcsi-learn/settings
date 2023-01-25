@@ -1,0 +1,8 @@
+extensions:
+1. Vim (vscodevim)
+2. GitLens (GitKraken)
+3. C# (Microsoft)
+4. NuGet Gallery (pcislo)
+5. Prettier (Prettier)
+6. Live Server (Ritwick Dey)
+7. Material Icon Theme (Philipp Kief)

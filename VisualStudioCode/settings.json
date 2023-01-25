@@ -1,0 +1,183 @@
+{
+  "security.workspace.trust.enabled": false,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#333333",
+    "statusBar.noFolderBackground": "#333333",
+    "statusBar.debuggingBackground": "#ff8800"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "editor.fontLigatures": false,
+  "editor.fontFamily": "Fira Code Light, 'Courier New', monospace",
+  "editor.lineNumbers": "relative",
+  "editor.formatOnPaste": true,
+  "editor.linkedEditing": true,
+  "editor.guides.bracketPairs": true,
+  "editor.renderWhitespace": "all",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.leader": "<space>",
+  "window.zoomLevel": -1,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["C-h"],
+      "after": ["<left>"]
+    },
+    {
+      "before": ["C-l"],
+      "after": ["<right>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.terminal.focus"],
+      "after": ["<backspace>"]
+    },
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["editor.action.addSelectionToNextFindMatch"]
+    },
+    {
+      "before": ["<leader>", "D"],
+      "commands": ["editor.action.addSelectionToPreviousFindMatch"]
+    },
+    {
+      "before": ["<leader>", "f", "d"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "f", "`"],
+      "after": ["c", "i", "w", "`", "`", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "'"],
+      "after": ["c", "i", "w", "'", "'", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "\""],
+      "after": ["c", "i", "w", "\"", "\"", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "("],
+      "after": ["c", "i", "w", "(", ")", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", ")"],
+      "after": ["c", "i", "w", "(", ")", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "["],
+      "after": ["c", "i", "w", "[", "]", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "]"],
+      "after": ["c", "i", "w", "[", "]", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "{"],
+      "after": ["c", "i", "w", "{", "}", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "}"],
+      "after": ["c", "i", "w", "{", "}", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "<"],
+      "after": ["c", "i", "w", "<", ">", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", ">"],
+      "after": ["c", "i", "w", "<", ">", "<Esc>", "P"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.terminal.focus"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["editor.action.addSelectionToNextFindMatch"]
+    },
+    {
+      "before": ["<leader>", "D"],
+      "commands": ["editor.action.addSelectionToPreviousFindMatch"]
+    },
+    {
+      "before": ["<leader>", "f", "`"],
+      "after": ["c", "`", "`", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "'"],
+      "after": ["c", "'", "'", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "\""],
+      "after": ["c", "\"", "\"", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "("],
+      "after": ["c", "(", ")", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", ")"],
+      "after": ["c", "(", ")", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "["],
+      "after": ["c", "[", "]", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "]"],
+      "after": ["c", "[", "]", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "{"],
+      "after": ["c", "{", "}", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "}"],
+      "after": ["c", "{", "}", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", "<"],
+      "after": ["c", "<", ">", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "f", ">"],
+      "after": ["c", "<", ">", "<Esc>", "P"]
+    }
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

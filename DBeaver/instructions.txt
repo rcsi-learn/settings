@@ -1,0 +1,7 @@
+
+1. Click on Help from the Menu Icon > Install New Software.
+2. Copy and paste the next url in Work with http://vrapper.sourceforge.net/update-site/stable
+3. Select Vrapper options.
+
+Documentation: https://vrapper.sourceforge.net/home/
+GitHub: https://github.com/vrapper/vrapper
