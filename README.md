@@ -1,2 +1,1 @@
-# vsvimrc
-Configuration for Visual Studio Vim Extension.
+Setups for working tools.
