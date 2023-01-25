@@ -1,1 +1,1 @@
-Setups for working tools.
+Settings for working tools.
