@@ -1,4 +1,4 @@
-set number
+﻿set number
 set relativenumber
 set ignorecase
 set smartcase
@@ -7,12 +7,27 @@ set clipboard=unnamed
 "let mapleader = “ “
 let mapleader = "\<SPACE>"
 
+"to test and add in the future
+"nnoremap <leader>of :vsc Project.OpenFolderinFileExplorer<CR>
+"map <leader>ws :vsc Window.Split<CR>
+"nnoremap <leader>wh :vsc Window.SplitWindowHorizontally
+"nnoremap <leader>wv :vsc Window.SplitWindowVertically
+
+nmap <leader>vv :so ~/_vsvimrc<CR>
+map <C-m> :vsc Edit.ListMembers<CR>
+vmap <leader>es :vsc Edit.SurroundWith<CR>
+nmap <C-o> :vsc View.NavigateBackward<CR>
+nmap <C-i> :vsc View.NavigateForward<CR>
+
 vmap <leader>fs :vsc Edit.FormatSelection<CR>
 nmap <leader>fd :vsc Edit.FormatDocument<CR>
 
-map <leader>cl :vsc Edit.ToggleLineComment<CR>
-map <leader>cb :vsc Edit.ToggleBlockComment<CR>
+map <leader>cl :vsc Edit.ToggleLineComment<CR><ESC>
+map <leader>cb :vsc Edit.ToggleBlockComment<CR><ESC>
 map <leader>qi :vsc Edit.QuickInfo<CR>
+map <leader>qa :vsc View.QuickActions<CR>
+"which is the diference?
+"nnoremap <leader>qp :vsc EditorContextMenus.CodeWindow.QuickActionsForPosition<CR>
 
 nmap <leader>gm :vsc Edit.NextMethod<CR>
 nmap <leader>gM :vsc Edit.PreviousMethod<CR>
@@ -25,9 +40,13 @@ nmap zd :vsc Edit.CollapsetoDefinitions<CR>
 nmap ze :vsc Edit.ExpandAllOutlining<CR>
 nmap zt :vsc Edit.ToggleOutliningExpansion<CR>
 
-map <leader>rr :vsc Refactor.Rename<CR>
+map <leader>rn :vsc Refactor.Rename<CR>
 map <leader>fr :vsc Edit.FindAllReferences<CR>
 map <leader>pd :vsc Edit.PeekDefinition<CR>
+map <leader>gi :vsc Edit.GoToImplementation<CR>
+
+map <leader>pj :vsc Edit.PasteJSONAsClasses<CR>
+map <leader>px :vsc Edit.PasteXMLAsClasses<CR>
 
 nmap <leader>f` ciw``<Esc>P
 nmap <leader>f' ciw''<Esc>P

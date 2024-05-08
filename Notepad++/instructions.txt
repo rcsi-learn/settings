@@ -9,3 +9,6 @@ Install Plugins:
 		- Multiple Cursor - Selection Add Next -> ctrl + d
 		- Multiple Cursor - Selection Add All -> ctrl + shift + d	
 2. BetterMultiSelection (for multicursor)
+3.ComparePlus
+4.XML Tools
+5.JSON Tools
