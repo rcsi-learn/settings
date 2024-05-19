@@ -1,0 +1,130 @@
+// Place your key bindings in this file to override the defaults
+[
+  // TERMINAL
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  // EXPLORER
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+e"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "ctrl+e",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  //GRAL
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickOpenWithModes",
+    "when": "editorTextFocus || terminalFocus || filesExplorerFocus"
+  },
+  {
+    "key": "alt+o",
+    "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
+    "when": "editorTextFocus || terminalFocus || filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+shift+q",
+    "command": "workbench.action.closeAllEditors",
+    "when": "editorTextFocus || terminalFocus || filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "cursorHome",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "cursorEnd",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
+  },
+  // {
+  //   "before": ["<leader>", "z", "f"],
+  //   "command": "editor.fold",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "before": ["<leader>", "z", "c"],
+  //   "command": "editor.foldAll",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "before": ["<leader>", "z", "m"],
+  //   "command": "editor.foldAllMarkerRegions",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "before": ["<leader>", "z", "r"],
+  //   "command": "editor.foldRecursively",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "key": "ctrl+t",
+  //   // "before": ["<leader>", "z", "t"],
+  //   "command": "editor.toggleFold",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "before": ["<leader>", "z", "u"],
+  //   "command": "editor.unfold",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "before": ["<leader>", "z", "e"],
+  //   "command": "editor.unfoldAll",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "before": ["<leader>", "z", "m"],
+  //   "command": "editor.unfoldAllMarkerRegions",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "before": ["<leader>", "z", "R"],
+  //   "command": "editor.unfoldRecursively",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // }
+]

@@ -1,31 +1,30 @@
 {
-  "security.workspace.trust.enabled": false,
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#333333",
-    "statusBar.noFolderBackground": "#333333",
-    "statusBar.debuggingBackground": "#ff8800"
-  },
-  "workbench.iconTheme": "material-icon-theme",
+  //https://cheatography.com/thissitesucks/cheat-sheets/vscode-vim/
+  /*Folding
+    zf{count}j Create a fold from the cursor down {count} lines
+    zf/{pa­ttern} Create a fold from the cursor to {pattern}
+    za Toggle fold at the cursor
+    zo Open fold under cursor
+    zO Open all folds
+    zc Close fold under cursor
+    zM Close all folds
+    zd Delete fold at the cursor
+    zE Delete all folds
+  */
   "workbench.sideBar.location": "right",
-  "editor.fontLigatures": false,
-  "editor.fontFamily": "Fira Code Light, 'Courier New', monospace",
-  "editor.lineNumbers": "relative",
-  "editor.formatOnPaste": true,
+  "workbench.colorTheme": "Default Dark Modern",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "Hack Nerd Font Mono",
   "editor.linkedEditing": true,
-  "editor.guides.bracketPairs": true,
-  "editor.renderWhitespace": "all",
+  "editor.lineNumbers": "relative",
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
+  "vim.foldfix": true,
   "vim.leader": "<space>",
-  "window.zoomLevel": -1,
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false
-  },
   "vim.insertModeKeyBindings": [
     {
       "before": ["C-h"],
@@ -36,13 +35,46 @@
       "after": ["<right>"]
     }
   ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-  ],
   "vim.normalModeKeyBindings": [
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "w", "k"], "commands": [":vsplit"] },
+    { "before": ["leader", "w", "h"], "commands": [":split"] },
+
+    // panes
     {
-      "before": ["<C-n>"],
-      "commands": [":nohl"]
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
     },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
+    // {
+    //   "before": ["<C-n>"],
+    //   "commands": [":nohl"]
+    // },
     {
       "before": ["<leader>", "t"],
       "commands": ["workbench.action.terminal.focus"],
@@ -103,9 +135,67 @@
     {
       "before": ["<leader>", "f", ">"],
       "after": ["c", "i", "w", "<", ">", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "q", "i"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "q", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "d", "i"],
+      "commands": ["editor.debug.action.showDebugHover"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "g", "e"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+    {
+      "before": ["<leader>", "g", "E"],
+      "commands": ["editor.action.marker.prevInFiles"]
+    },
+    {
+      "before": ["<leader>", "t", "q"],
+      "commands": ["workbench.action.hideEditorTabs"]
+    },
+    {
+      "before": ["<leader>", "t", "a"],
+      "commands": ["workbench.action.showMultipleEditorTabs"]
     }
   ],
   "vim.visualModeKeyBindings": [
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "w", "k"], "commands": [":vsplit"] },
+    { "before": ["leader", "w", "h"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
     {
       "before": ["<leader>", "t"],
       "commands": ["workbench.action.terminal.focus"]
@@ -118,6 +208,7 @@
       "before": ["<"],
       "commands": ["editor.action.outdentLines"]
     },
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
     {
       "before": ["<leader>", "d"],
       "commands": ["editor.action.addSelectionToNextFindMatch"]
@@ -169,15 +260,40 @@
     {
       "before": ["<leader>", "f", ">"],
       "after": ["c", "<", ">", "<Esc>", "P"]
+    },
+    {
+      "before": ["<leader>", "q", "i"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "d", "i"],
+      "commands": ["editor.debug.action.showDebugHover"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "g", "e"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+    {
+      "before": ["<leader>", "g", "E"],
+      "commands": ["editor.action.marker.prevInFiles"]
+    },
+    {
+      "before": ["<leader>", "t", "q"],
+      "commands": ["workbench.action.hideEditorTabs"]
+    },
+    {
+      "before": ["<leader>", "t", "a"],
+      "commands": ["workbench.action.showMultipleEditorTabs"]
+    },
+    //fix the error when paste over selected word in visual mode override the register yanked with the selected word
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
     }
   ],
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "workbench.editor.showTabs": "none"
 }

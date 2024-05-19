@@ -2,7 +2,8 @@ extensions:
 1. Vim (vscodevim)
 2. GitLens (GitKraken)
 3. C# (Microsoft)
-4. NuGet Gallery (pcislo)
-5. Prettier (Prettier)
-6. Live Server (Ritwick Dey)
-7. Material Icon Theme (Philipp Kief)
+4. C# Dev Kit
+5. NuGet Gallery (pcislo)
+6. Prettier (Prettier)
+7. Live Server (Ritwick Dey)
+8. Material Icon Theme (Philipp Kief)

@@ -8,7 +8,7 @@ Install Plugins:
 	1.6 Change and edit the shortcuts if exist an conflict with "ctrl + d", this is a configuration example:
 		- Multiple Cursor - Selection Add Next -> ctrl + d
 		- Multiple Cursor - Selection Add All -> ctrl + shift + d	
-2. BetterMultiSelection (for multicursor)
+2.BetterMultiSelection (for multicursor)
 3.ComparePlus
 4.XML Tools
 5.JSON Tools
