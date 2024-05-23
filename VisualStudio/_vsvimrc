@@ -13,8 +13,6 @@ let mapleader = "\<SPACE>"
 "nmap <leader>wg :vsc Window.Window.ToggleSplitView<CR>
 "nmap <leader>wh :vsc Window.SplitWindowHorizontally<CR>
 "nmap <leader>wv :vsc Window.SplitWindowVertically<CR>
-"imap <C-i> <kHome>
-"imap <C-a> <End>
 
 nmap <leader>wi :vsc Debug.Immediate<CR>
 nmap <leader>we :vsc View.ErrorList<CR>
@@ -83,6 +81,8 @@ vmap <leader>f> c<><Esc>P
 
 imap <C-h> <Left>
 imap <C-l> <Right>
-imap <C-k> <Up>
-imap <C-j> <Down>
+imap <C-a> <End>
+inoremap <C-i> <Esc>^i
+inoremap <A-k> <Esc>k$a
+inoremap <A-j> <Esc>j$a
 map <SPACE> <Nop>
