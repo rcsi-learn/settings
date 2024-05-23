@@ -80,51 +80,5 @@
     "key": "ctrl+a",
     "command": "cursorEnd",
     "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
-  },
-  // {
-  //   "before": ["<leader>", "z", "f"],
-  //   "command": "editor.fold",
-  //   "when": "editorTextFocus && foldingEnabled"
-  // },
-  // {
-  //   "before": ["<leader>", "z", "c"],
-  //   "command": "editor.foldAll",
-  //   "when": "editorTextFocus && foldingEnabled"
-  // },
-  // {
-  //   "before": ["<leader>", "z", "m"],
-  //   "command": "editor.foldAllMarkerRegions",
-  //   "when": "editorTextFocus && foldingEnabled"
-  // },
-  // {
-  //   "before": ["<leader>", "z", "r"],
-  //   "command": "editor.foldRecursively",
-  //   "when": "editorTextFocus && foldingEnabled"
-  // },
-  // {
-  //   "key": "ctrl+t",
-  //   // "before": ["<leader>", "z", "t"],
-  //   "command": "editor.toggleFold",
-  //   "when": "editorTextFocus && foldingEnabled"
-  // },
-  // {
-  //   "before": ["<leader>", "z", "u"],
-  //   "command": "editor.unfold",
-  //   "when": "editorTextFocus && foldingEnabled"
-  // },
-  // {
-  //   "before": ["<leader>", "z", "e"],
-  //   "command": "editor.unfoldAll",
-  //   "when": "editorTextFocus && foldingEnabled"
-  // },
-  // {
-  //   "before": ["<leader>", "z", "m"],
-  //   "command": "editor.unfoldAllMarkerRegions",
-  //   "when": "editorTextFocus && foldingEnabled"
-  // },
-  // {
-  //   "before": ["<leader>", "z", "R"],
-  //   "command": "editor.unfoldRecursively",
-  //   "when": "editorTextFocus && foldingEnabled"
-  // }
+  }
 ]

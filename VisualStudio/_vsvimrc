@@ -9,9 +9,18 @@ let mapleader = "\<SPACE>"
 
 "to test and add in the future
 "nnoremap <leader>of :vsc Project.OpenFolderinFileExplorer<CR>
-"map <leader>ws :vsc Window.Split<CR>
-"nnoremap <leader>wh :vsc Window.SplitWindowHorizontally
-"nnoremap <leader>wv :vsc Window.SplitWindowVertically
+"nmap <leader>ws :vsc Window.Split<CR>
+"nmap <leader>wg :vsc Window.Window.ToggleSplitView<CR>
+"nmap <leader>wh :vsc Window.SplitWindowHorizontally<CR>
+"nmap <leader>wv :vsc Window.SplitWindowVertically<CR>
+"imap <C-i> <kHome>
+"imap <C-a> <End>
+
+nmap <leader>wi :vsc Debug.Immediate<CR>
+nmap <leader>we :vsc View.ErrorList<CR>
+nmap <leader>wt :vsc View.TaskList<CR>
+nmap <leader>wo :vsc View.Output<CR>
+nmap <leader>wf :vsc View.FindResults1<CR>
 
 nmap <leader>vv :so ~/_vsvimrc<CR>
 map <C-m> :vsc Edit.ListMembers<CR>
@@ -73,7 +82,7 @@ vmap <leader>f< c<><Esc>P
 vmap <leader>f> c<><Esc>P
 
 imap <C-h> <Left>
-imap <C-j> <Down>
-imap <C-k> <Up>
 imap <C-l> <Right>
+imap <C-k> <Up>
+imap <C-j> <Down>
 map <SPACE> <Nop>
