@@ -3,6 +3,7 @@ set relativenumber
 set ignorecase
 set smartcase
 set clipboard=unnamed
+"set cursorline 
 
 "let mapleader = “ “
 let mapleader = "\<SPACE>"
@@ -29,12 +30,10 @@ nmap <C-i> :vsc View.NavigateForward<CR>
 vmap <leader>fs :vsc Edit.FormatSelection<CR>
 nmap <leader>fd :vsc Edit.FormatDocument<CR>
 
-map <leader>cl :vsc Edit.ToggleLineComment<CR><ESC>
-map <leader>cb :vsc Edit.ToggleBlockComment<CR><ESC>
+map <leader>cl :vsc Edit.ToggleLineComment<CR>:<ESC>
+map <leader>cb :vsc Edit.ToggleBlockComment<CR>:<ESC>
 map <leader>qi :vsc Edit.QuickInfo<CR>
 map <leader>qa :vsc View.QuickActions<CR>
-"which is the diference?
-"nnoremap <leader>qp :vsc EditorContextMenus.CodeWindow.QuickActionsForPosition<CR>
 
 nmap <leader>gm :vsc Edit.NextMethod<CR>
 nmap <leader>gM :vsc Edit.PreviousMethod<CR>
@@ -42,10 +41,10 @@ nmap <leader>gM :vsc Edit.PreviousMethod<CR>
 nmap <leader>ge :vsc View.NextError<CR>
 nmap <leader>gE :vsc View.PreviousError<CR>
 
-nmap zc :vsc Edit.CollapseAllOutlining<CR>
+nmap zM :vsc Edit.CollapseAllOutlining<CR>
 nmap zd :vsc Edit.CollapsetoDefinitions<CR>
-nmap ze :vsc Edit.ExpandAllOutlining<CR>
-nmap zt :vsc Edit.ToggleOutliningExpansion<CR>
+nmap zO :vsc Edit.ExpandAllOutlining<CR>
+nmap za :vsc Edit.ToggleOutliningExpansion<CR>
 
 map <leader>rn :vsc Refactor.Rename<CR>
 map <leader>fr :vsc Edit.FindAllReferences<CR>
@@ -82,7 +81,7 @@ vmap <leader>f> c<><Esc>P
 imap <C-h> <Left>
 imap <C-l> <Right>
 imap <C-a> <End>
-inoremap <C-i> <Esc>^i
-inoremap <A-k> <Esc>k$a
-inoremap <A-j> <Esc>j$a
+inoremap <C-h> <Esc>^i "Dont use C-i because has trouble with accept sugestion with tab
+imap <A-k> <Esc>k$a "Cant use control key, maybe has another funtion associate
+imap <A-j> <Esc>j$a "Cant use control key, maybe has another funtion associate
 map <SPACE> <Nop>
