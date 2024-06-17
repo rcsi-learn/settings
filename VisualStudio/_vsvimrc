@@ -3,57 +3,81 @@ set relativenumber
 set ignorecase
 set smartcase
 set clipboard=unnamed
-"set cursorline 
 
 "let mapleader = “ “
 let mapleader = "\<SPACE>"
+map <SPACE> <Nop>
+nmap <leader>vv :so ~/_vsvimrc<CR>
 
-"to test and add in the future
+"""""""""" to test
 "nnoremap <leader>of :vsc Project.OpenFolderinFileExplorer<CR>
 "nmap <leader>ws :vsc Window.Split<CR>
 "nmap <leader>wg :vsc Window.Window.ToggleSplitView<CR>
 "nmap <leader>wh :vsc Window.SplitWindowHorizontally<CR>
 "nmap <leader>wv :vsc Window.SplitWindowVertically<CR>
+"nnoremap <Space>wv :vsc Window.SplitWindowVertically<CR>
+"map <leader>vic :vsc View.IntelliCode<CR>
+"nnoremap <space>gob :vsc Team.Git.OpenBrowser<CR>
+"map <leader>gcl :vsc Team.Git.CompareWithLatest<CR> "dont work
+"map <leader>gcp :vsc Team.Git.CompareWithPrevious<CR> "dont work
+"map <leader>gob :vsc Team.Git.OpenBrowser<CR> "dont work
+"map <leader>goe :vsc Team.Git.FileExplorer<CR> "dont work
+"map <leader>gcd :vsc Team.Git.ViewCommitDetails<CR>
+"map <leader>gpr :vsc Team.Git.ViewPullRequests<CR>
 
-nmap <leader>wi :vsc Debug.Immediate<CR>
-nmap <leader>we :vsc View.ErrorList<CR>
-nmap <leader>wt :vsc View.TaskList<CR>
-nmap <leader>wo :vsc View.Output<CR>
-nmap <leader>wf :vsc View.FindResults1<CR>
 
-nmap <leader>vv :so ~/_vsvimrc<CR>
-map <C-m> :vsc Edit.ListMembers<CR>
-vmap <leader>es :vsc Edit.SurroundWith<CR>
-nmap <C-o> :vsc View.NavigateBackward<CR>
-nmap <C-i> :vsc View.NavigateForward<CR>
+"""""""""" Window/Pane
+map <leader>gcu :vsc Team.Git.CompareWithUnmodified<CR>
+map <leader>gbh :vsc Team.Git.ViewBranchHistory<CR>
+map <leader>gvh :vsc Team.Git.ViewHistory<CR>
+map <leader>guf :vsc Team.Git.Undo<CR> "dangerous
+map <leader>vwg :vsc View.GitWindow<CR>
+map <leader>dsa :vsc Debug.ShowAll<CR>
+map <leader>dvw :vsc Debug.Watch1<CR>
+nmap <leader>vwi :vsc Debug.Immediate<CR>
+nmap <leader>vwe :vsc View.ErrorList<CR>
+nmap <leader>vwt :vsc View.TaskList<CR>
+nmap <leader>vwo :vsc View.Output<CR>
+nmap <leader>vwf :vsc View.FindResults1<CR>
+nmap <leader>vwr :vsc View.FindReferencesWindow1<CR>
 
+
+"""""""""" Format text
 vmap <leader>fs :vsc Edit.FormatSelection<CR>
 nmap <leader>fd :vsc Edit.FormatDocument<CR>
-
-map <leader>cl :vsc Edit.ToggleLineComment<CR>:<ESC>
-map <leader>cb :vsc Edit.ToggleBlockComment<CR>:<ESC>
-map <leader>qi :vsc Edit.QuickInfo<CR>
-map <leader>qa :vsc View.QuickActions<CR>
-
-nmap <leader>gm :vsc Edit.NextMethod<CR>
-nmap <leader>gM :vsc Edit.PreviousMethod<CR>
-
-nmap <leader>ge :vsc View.NextError<CR>
-nmap <leader>gE :vsc View.PreviousError<CR>
-
 nmap zM :vsc Edit.CollapseAllOutlining<CR>
 nmap zd :vsc Edit.CollapsetoDefinitions<CR>
 nmap zO :vsc Edit.ExpandAllOutlining<CR>
 nmap za :vsc Edit.ToggleOutliningExpansion<CR>
 
-map <leader>rn :vsc Refactor.Rename<CR>
-map <leader>fr :vsc Edit.FindAllReferences<CR>
-map <leader>pd :vsc Edit.PeekDefinition<CR>
+
+"""""""""" Go to ...
+map <leader>gd :vsc Diff.NextDifference<CR>
+map <leader>gD :vsc Diff.PreviousDifference<CR>
+nmap <leader>gm :vsc Edit.NextMethod<CR>
+nmap <leader>gM :vsc Edit.PreviousMethod<CR>
+nmap <leader>ge :vsc View.NextError<CR>
+nmap <leader>gE :vsc View.PreviousError<CR>
 map <leader>gi :vsc Edit.GoToImplementation<CR>
 
+
+"""""""""" Edition / Search
+"works with c#
+vmap <leader>es :vsc Edit.SurroundWith<CR>
+map <leader>cl :vsc Edit.ToggleLineComment<CR>:<ESC>
+map <leader>cb :vsc Edit.ToggleBlockComment<CR>:<ESC>
+map <leader>qi :vsc Edit.QuickInfo<CR>
+map <leader>qa :vsc View.QuickActions<CR>
+map <leader>dqw :vsc Debug.QuickWatch<CR>
+map <leader>daw :vsc Debug.AddWatch<CR>
+map <leader>fr :vsc Edit.FindAllReferences<CR>
+map <leader>pd :vsc Edit.PeekDefinition<CR>
 map <leader>pj :vsc Edit.PasteJSONAsClasses<CR>
 map <leader>px :vsc Edit.PasteXMLAsClasses<CR>
+map <leader>rn :vsc Refactor.Rename<CR>
 
+
+"""""""""" Snipets
 nmap <leader>f` ciw``<Esc>P
 nmap <leader>f' ciw''<Esc>P
 nmap <leader>f" ciw""<Esc>P
@@ -78,10 +102,13 @@ vmap <leader>f} c{}<Esc>P
 vmap <leader>f< c<><Esc>P
 vmap <leader>f> c<><Esc>P
 
+"""""""""" Control / Alt Actions
+map <C-m> :vsc Edit.ListMembers<CR>
+nmap <C-o> :vsc View.NavigateBackward<CR>
+nmap <C-i> :vsc View.NavigateForward<CR>
 imap <C-h> <Left>
 imap <C-l> <Right>
 imap <C-a> <End>
 inoremap <C-h> <Esc>^i "Dont use C-i because has trouble with accept sugestion with tab
 imap <A-k> <Esc>k$a "Cant use control key, maybe has another funtion associate
 imap <A-j> <Esc>j$a "Cant use control key, maybe has another funtion associate
-map <SPACE> <Nop>
